@@ -43,4 +43,7 @@
     <string name="heads_up_ticker_exp_title">Enable heads-up ticker check</string>
     <string name="heads_up_ticker_exp_summary">When a notification is not noisy check if ticker is not null and show it. Grouped notifications are still half-broken, see hangouts.</string>
 
+    <!-- Status bar Settings -->
+    <string name="status_bar_prefs_title">Status bar</string>
+    <string name="keywords_status_bar">status bar drawer icons</string>
 </resources>
