@@ -39,6 +39,12 @@
                 android:summary="@string/double_tap_to_sleep_summary"
                 android:defaultValue="true" />
 
+        <com.android.settings.aod.GlobalSettingSwitchPreference
+                android:key="wake_when_plugged_or_unplugged"
+                android:title="@string/wake_when_plugged_or_unplugged_title"
+                android:summary="@string/wake_when_plugged_or_unplugged_summary"
+                android:defaultValue="false" />
+
         <PreferenceScreen
                 android:key="wallpaper"
                 android:title="@string/wallpaper_settings_title"
