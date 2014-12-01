@@ -556,8 +556,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mHaveDebugSettings = false;
         updateSwitch(mEnableAdb, Settings.Global.getInt(cr,
                 Settings.Global.ADB_ENABLED, 0) != 0);
-        updateCheckBox(mAdbNotify, Settings.Secure.getInt(cr,
-                Settings.Secure.ADB_NOTIFY, 1) != 0);
+        updateCheckBox(mAdbNotify, Settings.Global.getInt(cr,
+                Settings.Global.ADB_NOTIFY, 1) != 0);
         if (mEnableTerminal != null) {
             updateSwitch(mEnableTerminal,
                     context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
@@ -1477,8 +1477,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                         .setNegativeButton(android.R.string.cancel, null)
                         .show();
         } else if (preference == mAdbNotify) {
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_NOTIFY,
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_NOTIFY,
                     mAdbNotify.isChecked() ? 1 : 0);
         } else if (preference == mEnableTerminal) {
             final PackageManager pm = getActivity().getPackageManager();
@@ -1652,8 +1652,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 mDialogClicked = true;
                 Settings.Global.putInt(getActivity().getContentResolver(),
                         Settings.Global.ADB_ENABLED, 1);
-                Settings.Secure.putInt(getActivity().getContentResolver(),
-                        Settings.Secure.ADB_NOTIFY, 1);
+                Settings.Global.putInt(getActivity().getContentResolver(),
+                        Settings.Global.ADB_NOTIFY, 1);
                 mAdbNotify.setChecked(true);
                 mVerifyAppsOverUsb.setEnabled(true);
                 updateVerifyAppsOverUsbOptions();
