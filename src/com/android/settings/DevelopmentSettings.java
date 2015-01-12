@@ -167,6 +167,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String ADVANCED_REBOOT_KEY = "advanced_reboot";
 
+    private static final String HEADS_UP_TICKER_EXP_KEY = "heads_up_ticker_exp";
+
     private static final int RESULT_DEBUG_APP = 1000;
 
     private static final String PERSISTENT_DATA_BLOCK_PROP = "ro.frp.pst";
@@ -241,7 +243,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private PreferenceScreen mProcessStats;
     private ListPreference mRootAccess;
     private Object mSelectedRootValue;
+
     private CheckBoxPreference mAdvancedReboot;
+    private SwitchPreference mHeadsUpTicker;
+
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
     private final ArrayList<CheckBoxPreference> mResetCbPrefs
@@ -310,6 +315,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
         mAllPrefs.add(mPassword);
         mAdvancedReboot = findAndInitCheckboxPref(ADVANCED_REBOOT_KEY);
+        mHeadsUpTicker = findAndInitSwitchPref(HEADS_UP_TICKER_EXP_KEY);
 
 
         if (!android.os.Process.myUserHandle().equals(UserHandle.OWNER)) {
@@ -318,6 +324,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             disableForUser(mEnableTerminal);
             disableForUser(mPassword);
             disableForUser(mAdvancedReboot);
+            disableForUser(mHeadsUpTicker);
             disableForUser(mQuickBoot);
         }
 
@@ -591,6 +598,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateUSBAudioOptions();
         updateRootAccessOptions();
         updateAdvancedRebootOptions();
+        updateHeadsUpTickerOptions();
     }
 
     private void writeAdvancedRebootOptions() {
@@ -602,6 +610,22 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private void updateAdvancedRebootOptions() {
         mAdvancedReboot.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
                 Settings.Secure.ADVANCED_REBOOT, 0) != 0);
+    }
+
+    private void resetHeadsUpTickerOptions() {
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.HEADS_UP_TICKER_ENABLED, 0);
+    }
+
+    private void writeHeadsUpTickerOptions() {
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.HEADS_UP_TICKER_ENABLED,
+                mHeadsUpTicker.isChecked() ? 1 : 0);
+    }
+
+    private void updateHeadsUpTickerOptions() {
+        mHeadsUpTicker.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.HEADS_UP_TICKER_ENABLED, 0) != 0);
     }
 
     private void resetDangerousOptions() {
@@ -616,6 +640,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         resetDebuggerOptions();
         writeLogdSizeOption(null);
         resetRootAccessOptions();
+        resetHeadsUpTickerOptions();
         writeAnimationScaleOption(0, mWindowAnimationScale, null);
         writeAnimationScaleOption(1, mTransitionAnimationScale, null);
         writeAnimationScaleOption(2, mAnimatorDurationScale, null);
@@ -1503,6 +1528,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeUseNuplayerOptions();
         } else if (preference == mUSBAudio) {
             writeUSBAudioOptions();
+        } else if (preference == mHeadsUpTicker) {
+            writeHeadsUpTickerOptions();
         } else if (preference == mKillAppLongpressBack) {
             writeKillAppLongpressBackOptions();
         } else if (preference == mAdvancedReboot) {
