@@ -18,7 +18,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:scrollbars="vertical"
-    android:background="#ff404040">
+    android:background="#ff000000">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
                 android:paddingTop="53dip"
                 android:layout_width="match_parent"
                 android:layout_height="1dip"
-                android:background="#ff404040"
+                android:background="#ff222222"
                 />
 
             <EditText android:id="@+id/owner_info_nickname"
@@ -62,7 +62,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dip"
-                android:background="#ff404040"
+                android:background="#ff222222"
                 />
 
             <EditText android:id="@+id/owner_info_edit_text"
