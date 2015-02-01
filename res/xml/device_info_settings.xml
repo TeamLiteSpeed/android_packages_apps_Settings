@@ -20,14 +20,6 @@
     <PreferenceScreen android:key="logo1"
         android:layout="@layout/logo_row" />
 
-        <!-- System update settings - launches activity
-        <PreferenceScreen android:key="system_update_settings"
-                android:title="@string/system_update_settings_list_item_title" 
-                android:summary="@string/system_update_settings_list_item_summary">
-            <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
-        </PreferenceScreen> -->
-
-
         <PreferenceScreen android:key="additional_system_update_settings"
                           android:title="@string/additional_system_update_settings_list_item_title">
             <intent android:action="android.intent.action.MAIN"
@@ -118,10 +110,34 @@
                 android:title="@string/fcc_equipment_id"
                 android:summary="@string/device_info_default"/>
 
+        <!-- Device Mod version -->
+        <Preference android:key="md_version" 
+                style="?android:preferenceInformationStyle"
+                android:title="@string/mod_version"
+                android:summary="@string/mod_version_default" />
+
+        <!-- Mod build date -->
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"
+                android:summary="@string/build_date_default" />
+
         <!-- Device Baseband version -->
-        <Preference android:key="baseband_version" 
+        <Preference android:key="baseband_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/baseband_version"
+                android:summary="@string/device_info_default"/>
+
+	<!-- Device cpu info -->
+        <Preference android:key="device_cpu"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/cpu_info"
+                android:summary="@string/device_info_default"/>
+
+        <!-- Device mem info -->
+        <Preference android:key="device_memory"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/mem_info"
                 android:summary="@string/device_info_default"/>
         
         <!-- Device Kernel version -->
