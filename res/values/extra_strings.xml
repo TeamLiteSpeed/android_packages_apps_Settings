@@ -15,6 +15,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- General strings -->
+    <string name="attention">Attention</string>
+    <string name="reset">Reset</string>
     <string name="default_string">Default</string>
 
     <!-- Advanced reboot options -->
