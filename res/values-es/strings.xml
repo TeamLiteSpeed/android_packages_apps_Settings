@@ -23,8 +23,8 @@
     <string name="deny" msgid="6947806159746484865">"Denegar"</string>
     <string name="device_info_default" msgid="7847265875578739287">"Desconocido"</string>
   <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5295687242294085452">"Ahora estás a <xliff:g id="STEP_COUNT">%1$d</xliff:g> paso de ser un desarrollador"</item>
-    <item quantity="other" msgid="6722953419953594148">"Ahora estás a <xliff:g id="STEP_COUNT">%1$d</xliff:g> pasos de ser un desarrollador"</item>
+    <item quantity="one" msgid="5295687242294085452">"Ahora estás a <xliff:g id="STEP_COUNT">%1$d</xliff:g> paso de activar las opciones de desarrollo"</item>
+    <item quantity="other" msgid="6722953419953594148">"Ahora estás a <xliff:g id="STEP_COUNT">%1$d</xliff:g> pasos de activar las opciones de desarrollo"</item>
   </plurals>
     <string name="show_dev_on" msgid="1110711554982716293">"¡Ahora están activadas las opciones de desarrollo!"</string>
     <string name="show_dev_already" msgid="2151632240145446227">"No es necesario, están activadas las opciones de desarrollo."</string>
