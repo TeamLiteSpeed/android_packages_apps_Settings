@@ -25,8 +25,8 @@
 
     <!-- Per App Control for Keyguard Notifications -->
     <string name="app_notification_show_on_keyguard_title">Mostrar en pantalla de bloqueo</string>
-    <string name="app_notification_show_on_keyguard_summary">Mostrar notificaciones de esta aplicación en la pantalla de bloqueo</string>
-    <string name="app_notification_no_ongoing_on_keyguard_title">Desactivar notificaciones en marcha en la pantalla de bloqueo</string>
-    <string name="app_notification_no_ongoing_on_keyguard_summary">Nunca mostrar notificaciones en marcha de esta aplicación en la pantalla de bloqueo</string>
+    <string name="app_notification_show_on_keyguard_summary">Mostrar las notificaciones de esta aplicación en la pantalla de bloqueo</string>
+    <string name="app_notification_no_ongoing_on_keyguard_title">Deshabilitar en la pantalla de bloqueo</string>
+    <string name="app_notification_no_ongoing_on_keyguard_summary">No mostrar nunca notificaciones de esta aplicación en la pantalla de bloqueo</string>
 
 </resources>
