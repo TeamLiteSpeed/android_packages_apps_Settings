@@ -22,4 +22,11 @@
     <!-- Setting checkbox summary for displaying USB debugging notification -->
     <string name="adb_notify">Notificación del modo depuración USB</string>
     <string name="adb_notify_summary">Mostrar una notificación cuando el dispositivo está conectado en modo depuración USB</string>
+
+    <!-- Per App Control for Keyguard Notifications -->
+    <string name="app_notification_show_on_keyguard_title">Mostrar en pantalla de bloqueo</string>
+    <string name="app_notification_show_on_keyguard_summary">Mostrar notificaciones de esta aplicación en la pantalla de bloqueo</string>
+    <string name="app_notification_no_ongoing_on_keyguard_title">Desactivar notificaciones en marcha en la pantalla de bloqueo</string>
+    <string name="app_notification_no_ongoing_on_keyguard_summary">Nunca mostrar notificaciones en marcha de esta aplicación en la pantalla de bloqueo</string>
+
 </resources>
