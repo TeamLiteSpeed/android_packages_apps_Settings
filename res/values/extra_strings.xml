@@ -49,9 +49,8 @@
 
     <!-- Status bar Settings -->
     <string name="show_battery_percent_title">Show battery percentage</string>
-    <string name="status_bar_prefs_title">Status bar</string>
+    <string name="status_bar_prefs_title">Extra Mods</string>
     <string name="keywords_status_bar">status bar drawer icons</string>
-    <string name="show_battery_percent_title">Show Battery Percent</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
