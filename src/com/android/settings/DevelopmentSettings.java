@@ -168,6 +168,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
 
+    private static final String DEVELOPMENT_TOOLS = "development_tools";
+
     private static final String ADVANCED_REBOOT_KEY = "advanced_reboot";
 
     private static final String HEADS_UP_TICKER_EXP_KEY = "heads_up_ticker_exp";
@@ -248,7 +250,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private PreferenceScreen mProcessStats;
     private ListPreference mRootAccess;
     private Object mSelectedRootValue;
-
+    private PreferenceScreen mDevelopmentTools;
     private SwitchPreference mAdvancedReboot;
     private SwitchPreference mHeadsUpTicker;
 
@@ -404,6 +406,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
         mProcessStats = (PreferenceScreen) findPreference(PROCESS_STATS);
         mAllPrefs.add(mProcessStats);
+        mDevelopmentTools = (PreferenceScreen) findPreference(DEVELOPMENT_TOOLS);
+        mAllPrefs.add(mDevelopmentTools);
 
         mRootAccess = (ListPreference) findPreference(ROOT_ACCESS_KEY);
         mRootAccess.setOnPreferenceChangeListener(this);

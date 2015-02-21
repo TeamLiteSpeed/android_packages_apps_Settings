@@ -29,4 +29,7 @@
     <string name="app_notification_no_ongoing_on_keyguard_title">Deshabilitar notificaciones persistentes</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">No mostrar nunca notificaciones persistentes de esta aplicación en la pantalla de bloqueo</string>
 
+    <!-- Launch Dev Tools -->
+    <string name="development_tools_title">Herramientas de desarrollo</string>
+
 </resources>
