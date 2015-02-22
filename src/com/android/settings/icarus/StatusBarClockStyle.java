@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.incarus;
+package com.android.settings.icarus;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
