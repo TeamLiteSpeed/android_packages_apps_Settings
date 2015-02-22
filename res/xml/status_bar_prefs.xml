@@ -25,7 +25,7 @@
 
         <PreferenceScreen
             android:key="clock_style_pref"
-            android:fragment="com.android.settings.incarus.StatusBarClockStyle"
+            android:fragment="com.android.settings.icarus.StatusBarClockStyle"
             android:title="@string/status_bar_clock" />
 
 
