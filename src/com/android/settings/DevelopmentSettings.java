@@ -303,7 +303,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             }
         }
         mAllPrefs.add(mClearAdbKeys);
-        mAdbNotify = findAndInitCheckboxPref(ADB_NOTIFY);
+        mAdbNotify = findAndInitSwitchPref(ADB_NOTIFY);
         mEnableTerminal = findAndInitSwitchPref(ENABLE_TERMINAL);
         if (!isPackageInstalled(getActivity(), TERMINAL_APP_PACKAGE)) {
             debugDebuggingCategory.removePreference(mEnableTerminal);
@@ -560,7 +560,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mHaveDebugSettings = false;
         updateSwitch(mEnableAdb, Settings.Global.getInt(cr,
                 Settings.Global.ADB_ENABLED, 0) != 0);
-        updateCheckBox(mAdbNotify, Settings.Global.getInt(cr,
+        updateSwitch(mAdbNotify, Settings.Global.getInt(cr,
                 Settings.Global.ADB_NOTIFY, 1) != 0);
         if (mEnableTerminal != null) {
             updateSwitch(mEnableTerminal,
